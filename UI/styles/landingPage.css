@@ -77,17 +77,6 @@ header a:hover{
   font-weight:bold;
 }
 
-/*header .sub-services{
-  display: none;
-}*/
-
-header a:hover .sub-services{
-  display: block;
-  background:#35424a;
-  position: absolute;
-  margin-top:15px;
-  margin-left:-15px;
-}
 
 header a:hover .sub-services ul{
   display:block;
@@ -107,7 +96,7 @@ header a:hover .sub-services ul li{
 /* Showcase */
 #showcase{
   min-height:400px;
-  background:url('../img/bus1.jpg') no-repeat 0 -100px;
+  background:url('../images/headphone-man.jpg') no-repeat 0 -50px ;
   text-align:center;
   color:#ffffff;
 }
@@ -164,6 +153,7 @@ header a:hover .sub-services ul li{
 
 #boxes .box img{
   width:90px;
+  height:110px;
 }
 
 
