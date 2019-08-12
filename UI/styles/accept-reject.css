@@ -1,9 +1,20 @@
+<<<<<<< HEAD
+=======
+
+/** {
+	box-sizing: border-box;
+	*/
+>>>>>>> 1a55352e3d597d02aad8847415a219a48638f7e6
 body {
 	 margin: 0;
     padding: 0;
     background: url(../images/begin.jpg);
     background-size: cover;
+<<<<<<< HEAD
     background-position: 0 -250px;
+=======
+    background-position: center;
+>>>>>>> 1a55352e3d597d02aad8847415a219a48638f7e6
     font-family: sans-serif;
     font: 15px/1.5 Arial, Helvetica,sans-serif;
 }
