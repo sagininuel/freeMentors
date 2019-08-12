@@ -4,6 +4,7 @@ body{
   padding:0;
   margin:0;
   background-color:#f4f4f4;
+  font-family: sans-serif;
 }
 
 /* Global */
@@ -33,6 +34,15 @@ ul{
   }
 
 /* Header **/
+.mentor-avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.5px;
+    left: calc(14% - 150px);
+}
+
 header{
   background:#35424a;
   color:#ffffff;
@@ -41,7 +51,7 @@ header{
   border-bottom:orange 3px solid;
 }
 
-header a{
+a, header a{
   color:#ffffff;
   text-decoration:none;
   text-transform: uppercase;
@@ -95,10 +105,11 @@ header a:hover .sub-services ul li{
 
 /* Showcase */
 #showcase{
-  min-height:400px;
-  background:url('../images/headphone-man.jpg') no-repeat 0 -50px ;
+  min-height:600px;
+  background:url('../images/headphone-man.jpg') no-repeat 0 -20px ;
   text-align:center;
   color:#ffffff;
+  /*margin-bottom: 100px;*/
 }
 
 #showcase h1{
@@ -114,6 +125,20 @@ header a:hover .sub-services ul li{
   font-size:20px;
   text-align: left;
   padding:15px;
+}
+
+#showcase a{
+  float:left;
+  font-size:20px;
+  text-align: left;
+  padding:15px;
+  text-decoration: none;
+   
+}
+
+#showcase a:hover{
+  color:#cccccc;
+  font-weight:bold;
 }
 
 /* Newsletter */
@@ -149,6 +174,10 @@ header a:hover .sub-services ul li{
   text-align: center;
   width:30%;
   padding:10px;
+  border:5px;
+  border-radius: 5px;
+  border-radius-bottom :7px;
+  border-colour:#cccccc;
 }
 
 #boxes .box img{
@@ -194,6 +223,9 @@ footer{
   #newsletter button, .quote button{
     display:block;
     width:100%;
+  }
+  .mentor-avatar{
+    float:center;
   }
 
   #newsletter form input[type="email"], .quote input, .quote textarea{
