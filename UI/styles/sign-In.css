@@ -129,14 +129,14 @@ h1{
     padding: 0 0 20px;
     text-align: center;
     font-size: 22px;
-    color:#fff;
+    color: #fff;
 }
 
 .signinbox p{
     margin: 0;
     padding: 0;
     font-weight: bold;
-    color:#fff;
+    color: #fff;
 }
 
 .signinbox input{
@@ -144,7 +144,7 @@ h1{
     margin-bottom: 20px;
 }
 
-.signinbox input[type="email"], input[type="password"],input[type='text']{
+.signinbox input[type="email"], input[type="password"], input[type='text']{
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
