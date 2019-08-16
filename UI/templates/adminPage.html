@@ -6,8 +6,8 @@
     <meta name="description" content="free mentorship">
     <meta name="keywords" content="free mentors">
     <meta name="author" content="Sagini Emmanuel">
-    <title> FreeMentors | Accept </title>
-    <link rel="stylesheet" href="../styles/accept-reject.css">
+    <title> FreeMentors |Admin Page </title>
+    <link rel="stylesheet" href="../styles/adminPage.css">
   </head>
 	<body>
 		<header>
@@ -17,19 +17,92 @@
 	          <a href="landingPage.html"><img src="../images/mentor-image.png" class="mentor-avatar"></a>
 	        </div>
 	        <nav>
+	        	<p id="login">Signed In as Admin</p>
 	          <ul>
 	            <li><a href="landingPage.html">Home</a></li>  
-	            <li><a href="about.html">About Us</a></li>          
-	            <li><a href="mentors.html">Check out a Mentor</a> </li>          
-	            
+	            <li><a href="about.html">About Us</a></li>             
 	          </ul>
 	        </nav>
 	      </div>
 	    </header>
-	    
-	<footer>
-		<p>
-			Sagini Web Design, Copyright &copy;2019
-		</p>
-	</footer>
-</body>
+	    <div class="wrapper">
+
+	    	 <section id="users-list">
+		    	<h2 class = "title"> Registered Users</h2>
+		    	<ul>
+		    		<li>
+		    			<span class="name">Justus Mochumbe</span>
+		    			<span class="upgradeUser">Change user to mentor</span>
+		    		</li>
+		    		<li>
+		    			<span class="name">Jacinta Musyawa</span>
+		    			<span class="upgradeUser">Change user to mentor</span>
+		    		</li>
+		    		<li>
+		    			<span class="name">Ruth Mabeya</span>
+		    			<span class="upgradeUser">Change user to mentor</span>
+		    		</li>
+		    		<li>
+		    			<span class="name">Sagini Emmanuel</span>
+		    			<span class="upgradeUser">Change user to mentor</span>
+		    		</li>
+		    		<li>
+		    			<span class="name">Jeff Mochumbe</span>
+		    			<span class="upgradeUser">Change user to mentor</span>
+		    		</li>
+		    	</ul>
+
+		    </section>
+
+		    <section id = "mentors">
+		    	<h1>Welcome Administrator</h1>
+		    	<form id = "search-mentors">
+		    		<input type="text" placeholder = "Filter out a mentor...">
+		    	</form>
+		    </section>
+
+		    <section id="mentors-list">
+		    	<h2 class = "title"> Registered Mentors </h2>
+		    	<ul>
+		    		<li>
+		    			<span class="name">Justus Ebmuhcom</span>
+		    			
+		    		</li>
+		    		<li>
+		    			<span class="name">Jacinta Awaysum</span>
+		    			
+		    		</li>
+		    		<li>
+		    			<span class="name">Ruth Ayebam</span>
+		    			
+		    		</li>
+		    		<li>
+		    			<span class="name">Sagini leuname</span>
+		    			
+		    		</li>
+		    		<li>
+		    			<span class="name">Jeff Bryant</span>
+		    			
+		    		</li>
+		    	</ul>
+		    </section>
+		    
+		    <section>
+		    	<form id="add-mentor">
+		    		<input type="text" placeholder="Enter a name...">
+		    		<button>Add a Mentor</button>
+		    	</form>
+		    </section>
+
+		   
+		</div> 
+		<footer>
+
+			<p>
+				Sagini Web Design, Copyright &copy;2019
+			</p>
+		</footer>
+
+		<script src="../javascript/adminPage.js"></script>
+ 	</body>
+</html>
