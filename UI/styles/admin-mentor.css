@@ -1,0 +1,121 @@
+body {
+	 margin: 0;
+    padding: 0;
+    background: url(../images/begin.jpg);
+    background-size: cover;
+    background-position: 0 -250px;
+    font-family: sans-serif;
+    font: 15px/1.5 Arial, Helvetica,sans-serif;
+}
+
+h1,label {
+	font-weight: bold;
+	margin: 2px;
+}
+
+h2, label {
+	text-align: center;
+}
+
+
+/* Header **/
+#head-container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+.mentor-avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.5px;
+    left: calc(14% - 150px);
+}
+
+header{
+  background:#35424a;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:orange 3px solid;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:orange;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+
+header a:hover .sub-services ul{
+  display:block;
+  margin:10;
+}
+
+header a:hover .sub-services ul li{
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted #fff;
+  background:transparent;
+  border-radius: 0;
+  text-align: left;
+}
+
+
+/*Footer section*/
+footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer i {
+    color: red;
+}
+
+footer a {
+    color: #3c97bf;
+    text-decoration: none;
+}
