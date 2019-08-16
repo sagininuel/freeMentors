@@ -1,0 +1,271 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../images/begin.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    font: 15px/1.5 Arial, Helvetica,sans-serif;
+}
+
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+
+/* Header **/
+.mentor-avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.5px;
+    left: calc(14% - 150px);
+}
+
+header{
+  background:#35424a;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:orange 3px solid;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:orange;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+
+header a:hover .sub-services ul{
+  display:block;
+  margin:10;
+}
+
+header a:hover .sub-services ul li{
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted #fff;
+  background:transparent;
+  border-radius: 0;
+  text-align: left;
+}
+
+.signinbox{
+    max-width: 350px;
+    border-radius: 20px;
+    margin:auto;
+    background:rgba(0,0,0,0.8);
+    box-sizing: border-box;
+    padding: 40px;
+    colour: #fff;
+    margin-top: 50px;
+    margin-bottom: 64px;
+    float:center;
+   
+}
+#resetPasswordBox{
+    max-width: 350px;
+    border-radius: 20px;
+    margin:auto;
+    background:rgba(0,0,0,1.8);
+    box-sizing: border-box;
+    padding: 40px;
+    colour: #fff;
+    margin-top: 50px;
+    margin-bottom: 64px;
+    float:center;
+   
+}
+#signUpBox{
+    max-width: 350px;
+    border-radius: 20px;
+    margin:auto;
+    background:rgba(0,50,0,0.8);
+    box-sizing: border-box;
+    padding: 40px;
+    colour: #fff;
+    margin-top: 50px;
+    margin-bottom: 64px;
+    float:center;
+   
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+}
+
+.signinbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+.signinbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.signinbox input[type="email"], input[type="password"], input[type='text']{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.signinbox #user{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 20px;
+    padding: 7px 40px 7px 40px;
+    border-radius: 20px;
+    position:center;
+    margin: 0 auto 0 40px;
+    /*text-align: center;*/
+}
+
+.signinbox #admin{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #cccccc;
+    color: #fff;
+    font-size: 20px;
+    padding: 7px 40px 7px 40px;
+    border-radius: 20px;
+    position: center;
+    margin: 0 auto 0 35px;
+}
+
+.signinbox #mentor{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 20px;
+    padding: 7px 40px 7px 40px;
+    border-radius: 20px;
+    position:center;
+    margin: 0 auto 0 32px;
+    margin-top: 20px;
+}
+
+.signinbox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.signinbox #user:hover, .signinbox #mentor:hover, .signinbox #admin:hover{
+  cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
+.signinbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
+.signinbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.signinbox a:hover
+{
+    color: #ffc107;
+}
+
+
+footer{
+  padding:20px;
+  margin-top:20px;
+  color:#ffffff;
+  background-color:#35424a;
+  text-align: center;
+}
+
+/* Media Queries */
+@media(max-width: 700px){
+  header #branding,
+  header nav,
+  header nav li{
+    float:none;
+    text-align:center;
+    width:100%;
+    display:block;
+  }
+  body{
+    background-color: rgba(0,50,30,0.7);
+    /*background-size:100%;*/
+    background-position: 0 200px;
+  }
+
+  header{
+    padding-bottom:20px;
+
+  }
+ 
+  .mentor-avatar{
+    width: 20%; 
+    height:10%;  
+    position: absolute;
+    float:center;
+    margin-left:150px;
+  }
+}
+

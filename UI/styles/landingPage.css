@@ -3,7 +3,8 @@ body{
   font: 15px/1.5 Arial, Helvetica,sans-serif;
   padding:0;
   margin:0;
-  background-color:#f4f4f4;
+  background-color:grey;
+  font-family: sans-serif;
 }
 
 /* Global */
@@ -33,6 +34,15 @@ ul{
   }
 
 /* Header **/
+.mentor-avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.5px;
+    left: calc(14% - 150px);
+}
+
 header{
   background:#35424a;
   color:#ffffff;
@@ -41,7 +51,7 @@ header{
   border-bottom:orange 3px solid;
 }
 
-header a{
+a, header a{
   color:#ffffff;
   text-decoration:none;
   text-transform: uppercase;
@@ -95,10 +105,11 @@ header a:hover .sub-services ul li{
 
 /* Showcase */
 #showcase{
-  min-height:400px;
-  background:url('../images/headphone-man.jpg') no-repeat 0 -50px ;
+  min-height:600px;
+  background:url('../images/headphone-man.jpg') no-repeat 0 -20px ;
   text-align:center;
   color:#ffffff;
+  /*margin-bottom: 100px;*/
 }
 
 #showcase h1{
@@ -116,27 +127,18 @@ header a:hover .sub-services ul li{
   padding:15px;
 }
 
-/* Newsletter */
-#newsletter{
-  padding:15px;
-  color:white;
-  background:#35424a
-}
-
-#newsletter h1{
+#showcase a{
   float:left;
+  font-size:20px;
+  text-align: left;
+  padding:15px;
+  text-decoration: none;
+   
 }
 
-#newsletter form {
-  float:right;
-  margin-top:15px;
-}
-
-#newsletter input[type="email"]{
-  padding:4px;
-  height:25px;
-  width:250px;
-  border-radius: 2px;
+#showcase a:hover{
+  color:#cccccc;
+  font-weight:bold;
 }
 
 /* Boxes */
@@ -149,11 +151,16 @@ header a:hover .sub-services ul li{
   text-align: center;
   width:30%;
   padding:10px;
+  border:5px;
+  border-radius: 5px;
+  border-radius-bottom :7px;
+  border-colour:#cccccc;
 }
 
 #boxes .box img{
-  width:90px;
+  width:50%;
   height:110px;
+  border-radius: 10px;
 }
 
 
@@ -169,35 +176,40 @@ footer{
 
 
 /* Media Queries */
-@media(max-width: 768px){
+@media(max-width: 700px){
   header #branding,
   header nav,
-  header nav li,
-  #newsletter h1,
-  #newsletter form,
-  #boxes .box,
-  article#main-col,
-  aside#sidebar{
+  header nav li{
     float:none;
     text-align:center;
     width:100%;
+    display:block;
+  }
+  body{
+    background-color: rgba(0,50,30,0.7);
+    background-image:30%;
   }
 
   header{
     padding-bottom:20px;
+
+  }
+  #showcase{
+    background-size: 100%
   }
 
-  #showcase h1{
-    margin-top:40px;
+  #showcase h1 p a{
+    text-align: center;
+    margin:none;
+    position: center;
+
   }
 
-  #newsletter button, .quote button{
-    display:block;
-    width:100%;
-  }
-
-  #newsletter form input[type="email"], .quote input, .quote textarea{
-    width:100%;
-    margin-bottom:5px;
+ .mentor-avatar{
+    width: 20%; 
+    height:10%;  
+    position: absolute;
+    float:center;
+    margin-left:150px;
   }
 }
