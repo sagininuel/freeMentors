@@ -1,9 +1,12 @@
-
 body{
   font: 15px/1.5 Arial, Helvetica,sans-serif;
   padding:0;
   margin:0;
   background-color:#f4f4f4;
+  background: url(../images/mentor-image.png);
+  background-size: cover;
+  background-position: absolute;
+  top: 50px;
   font-family: sans-serif;
 }
 
@@ -19,21 +22,34 @@ ul{
   padding:0;
 }
 
-.button_1 :hover{
-  font-weight: bolder;
-  color:black;
-}
 .button_1{
   height:38px;
-  background:orange;
+  background:grey;
   border:0;
-  margin-bottom:10px; 
   padding-left: 20px;
   padding-right:20px;
-  color:black;
-  }
+  color:#ffffff;
+}
+.button_1:hover{
+  color:#000;
+  font-style: italic;
+}
+
+.dark{
+  padding:15px;
+  background:#35424a;
+  color:#ffffff;
+  margin-top:10px;
+  margin-bottom:10px;
+  font-size: 15px;
+}
+.page-title{
+  font-size: 25px;
+  /*text-decoration: underline;*/
+}
 
 /* Header **/
+
 .mentor-avatar{
     width: 100px;
     height: 100px;
@@ -51,7 +67,7 @@ header{
   border-bottom:orange 3px solid;
 }
 
-a, header a{
+header a{
   color:#ffffff;
   text-decoration:none;
   text-transform: uppercase;
@@ -77,7 +93,7 @@ header nav{
   margin-top:10px;
 }
 
-header .highlight, header .current a{
+header #highlight, header .current a{
   color:orange;
   font-weight:bold;
 }
@@ -88,63 +104,11 @@ header a:hover{
 }
 
 
-header a:hover .sub-services ul{
-  display:block;
-  margin:10;
-}
-
-header a:hover .sub-services ul li{
-  width: 150px;
-  padding: 10px;
-  border-bottom: 1px dotted #fff;
-  background:transparent;
-  border-radius: 0;
-  text-align: left;
-}
-
-
-/* Showcase */
-#showcase{
-  min-height:600px;
-  background:url('../images/headphone-man.jpg') no-repeat 0 -20px ;
-  text-align:center;
-  color:#ffffff;
-  /*margin-bottom: 100px;*/
-}
-
-#showcase h1{
-  margin-top:100px;
-  font-size:55px;
-  margin-bottom:10px;
-  text-align: left;
-  padding: 5px;
-
-}
-
-#showcase p{
-  font-size:20px;
-  text-align: left;
-  padding:15px;
-}
-
-#showcase a{
-  float:left;
-  font-size:20px;
-  text-align: left;
-  padding:15px;
-  text-decoration: none;
-   
-}
-
-#showcase a:hover{
-  color:#cccccc;
-  font-weight:bold;
-}
-
 /* Newsletter */
 #newsletter{
+  margin-top: 20px;
   padding:15px;
-  color:white;
+  color:#ffffff;
   background:#35424a
 }
 
@@ -161,41 +125,35 @@ header a:hover .sub-services ul li{
   padding:4px;
   height:25px;
   width:250px;
-  border-radius: 2px;
 }
 
-/* Boxes */
-#boxes{
-  margin-top:20px;
-}
 
-#boxes .box{
-  float:left;
-  text-align: center;
+/* Sidebar */
+aside#sidebar{
+  float:right;
   width:30%;
-  padding:10px;
-  border:5px;
-  border-radius: 5px;
-  border-radius-bottom :7px;
-  border-colour:#cccccc;
+  margin-top:10px;
 }
 
-#boxes .box img{
-  width:90px;
-  height:110px;
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+  width:90%;
+  padding:5px;
+}
+
+/* Main-col */
+article#main-col{
+  float:left;
+  width:65%;
 }
 
 
 footer{
   padding:20px;
-  margin-top:20px;
+  margin-top:100px;
   color:#ffffff;
   background-color:#35424a;
   text-align: center;
 }
-
-/* Sign In*/
-
 
 /* Media Queries */
 @media(max-width: 768px){
@@ -223,9 +181,6 @@ footer{
   #newsletter button, .quote button{
     display:block;
     width:100%;
-  }
-  .mentor-avatar{
-    float:center;
   }
 
   #newsletter form input[type="email"], .quote input, .quote textarea{
