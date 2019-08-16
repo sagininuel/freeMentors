@@ -144,8 +144,7 @@ h1{
     margin-bottom: 20px;
 }
 
-.signinbox input[type="email"], input[type="password"],input[type='text']
-{
+.signinbox input[type="email"], input[type="password"],input[type='text']{
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -154,27 +153,49 @@ h1{
     color: #fff;
     font-size: 16px;
 }
-.signinbox input[type="submit"],#user{
+
+.signinbox #user{
     border: none;
     outline: none;
     height: 40px;
     background: rgba(0,0,0,0.7);
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
+    padding: 7px 40px 7px 40px;
     border-radius: 20px;
+    position:center;
+    margin: 0 auto 0 40px;
+    /*text-align: center;*/
 }
 
-.signinbox input[type="submit"], #admin{
+.signinbox #admin{
     border: none;
     outline: none;
     height: 40px;
     background: #cccccc;
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
+    padding: 7px 40px 7px 40px;
     border-radius: 20px;
+    position: center;
+    margin: 0 auto 0 35px;
 }
 
-.signinbox input[type="submit"], #mentor{
+.signinbox #mentor{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 20px;
+    padding: 7px 40px 7px 40px;
+    border-radius: 20px;
+    position:center;
+    margin: 0 auto 0 32px;
+    margin-top: 20px;
+}
+
+.signinbox input[type="submit"]{
     border: none;
     outline: none;
     height: 40px;
@@ -184,12 +205,19 @@ h1{
     border-radius: 20px;
 }
 
+.signinbox #user:hover, .signinbox #mentor:hover, .signinbox #admin:hover{
+  cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
 .signinbox input[type="submit"]:hover
 {
     cursor: pointer;
     background: #ffc107;
     color: #000;
 }
+
 .signinbox a{
     text-decoration: none;
     font-size: 12px;
@@ -211,65 +239,33 @@ footer{
   text-align: center;
 }
 
+/* Media Queries */
+@media(max-width: 700px){
+  header #branding,
+  header nav,
+  header nav li{
+    float:none;
+    text-align:center;
+    width:100%;
+    display:block;
+  }
+  body{
+    background-color: rgba(0,50,30,0.7);
+    /*background-size:100%;*/
+    background-position: 0 200px;
+  }
 
+  header{
+    padding-bottom:20px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
+ 
+  .mentor-avatar{
+    width: 20%; 
+    height:10%;  
+    position: absolute;
+    float:center;
+    margin-left:150px;
+  }
+}
 
