@@ -1,13 +1,9 @@
-
-/** {
-	box-sizing: border-box;
-	*/
 body {
 	 margin: 0;
     padding: 0;
     background: url(../images/begin.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: 0 -250px;
     font-family: sans-serif;
     font: 15px/1.5 Arial, Helvetica,sans-serif;
 }
@@ -221,8 +217,8 @@ input {
 
 .overlay {
 	background: rgba(0,0,0,0.3);
-	background: -webkit-linear-gradient(to right, rgba(0,400,0,0.6), orange);
-	background: linear-gradient(to right, black, rgba(0,200,0,0.6));
+	background: -webkit-linear-gradient(to right, rgba(0,50,100,0.7), orange);
+	background: linear-gradient(to right, black, rgba(20,0,100,0.7));
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -311,4 +307,33 @@ footer i {
 footer a {
     color: #3c97bf;
     text-decoration: none;
+}
+
+/* Media Queries */
+@media(max-width: 700px){
+  header #branding,
+  header nav,
+  header nav li{
+    float:none;
+    text-align:center;
+    width:100%;
+    display:block;
+  }
+  body{
+    background-color: rgba(0,50,30,0.7);
+    background-size:100%;
+    background-position: 0 250px;
+  }
+
+  header{
+    padding-bottom:20px;
+
+  }
+ .mentor-avatar{
+    width: 20%; 
+    height:10%;  
+    position: absolute;
+    float:center;
+    margin-left:150px;
+  }
 }
