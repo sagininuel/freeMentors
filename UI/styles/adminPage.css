@@ -1,0 +1,272 @@
+body{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4; 
+  background: url(../images/hold-on.png);
+  background-size: cover;  
+  background-position: -80px 250px;
+  background-repeat: none;
+  top: 50px;
+  font-family: sans-serif;
+}
+
+#mentors h1{
+    font-size: 40px;
+    font-style: courier;
+    color: white;
+    padding: none; 
+    margin-left: 400px;  
+    position: center;    
+}
+#users-list h2{
+    font-size: 30px;
+    font-style: courier;
+    color: white;
+    padding: none;
+    text-decoration: underline; 
+    /*margin-left: 200px;  */
+     
+}
+#mentors-list h2{
+    font-size: 30px;
+    font-style: courier;
+    color: white;
+    padding: none;
+    text-decoration: underline; 
+}
+
+#login{
+    position: right;
+    float: right;
+    width:auto;
+}
+
+
+/* Header **/
+#head-container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+.mentor-avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.5px;
+    left: calc(14% - 150px);
+}
+
+header{
+  background:#35424a;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:orange 2px solid;
+}
+
+header a{
+  color:#ffffff;
+  background-color:#35424a; 
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:orange;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+
+header a:hover .sub-services ul{
+  display:block;
+  margin:10;
+}
+
+header a:hover .sub-services ul li{
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted #fff;
+  background:transparent;
+  border-radius: 0;
+  text-align: left;
+}
+
+/* Content */
+
+.wrapper{
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;    
+    max-width: 200%;    
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);   
+    overflow: hidden;
+   
+}
+
+#mentors-list, #add-mentor, #users-list{
+    margin: 50px;
+}
+
+#mentors-list ul, #users-list ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+#mentors-list li, #users-list li{
+    padding: 20px;
+    border-left: 5px solid #ddd;
+    margin: 20px 10px;
+    color: white;
+}
+
+#mentors-list li:hover{
+    border-color: orange;
+}
+#users-list li:hover{
+    border-color: orange;
+}
+
+
+.upgradeUser, .session-request, .decline-request{
+    float: right;
+    background: orange;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #000;
+    margin: 0 10px 0 10px;
+}
+
+.upgradeUser:hover, .session-request:hover, .decline-request:hover, a{
+    background: #333;
+    text-decoration: none;
+}
+
+#add-mentor{
+    width: 400px;
+    margin: 0 auto;
+}
+
+#add-mentor input{
+    display: block;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    width: 400px;   
+    clear: both;
+}
+
+.wrapper #search-mentors input{
+    display: block;
+    margin: 20px 430px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 400px;    
+    clear: both;
+    position: center;
+}
+
+
+#add-mentor button{
+    border: 1.9px solid #9361bf;
+    background: rgba(100,100,55,0.7);
+    padding: 10px 20px;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0;
+    border-radius: 4px 0 0 4px;
+    cursor: pointer;
+    width: 200px;
+   /*position: center;*/
+    margin-left: 200px;
+    margin-bottom: 20px;
+    /*border-left: 0;*/
+    color: white;    
+}
+
+/* Footer */
+
+
+footer{
+  padding:20px;
+  margin-top:none;
+  color:#ffffff;
+  background-color:#35424a;
+  text-align: center;
+  font-family: Helvetica,sans-serif, courier;
+  font-size: 15px;
+}
+
+/* Media Queries */
+@media(max-width: 700px){
+  header #branding,
+  header nav,
+  header nav li{
+    float:none;
+    text-align:center;
+    width:100%;
+    display:block;
+  }
+  body{
+    background-color: rgba(0,50,30,0.7);
+    background-size:100%;
+    background-position: 0 250px;
+  }
+
+  header{
+    padding-bottom:20px;
+  }
+  
+  #mentors h1{
+    text-align: left;
+    margin-left:20px;
+    position: center;
+  }
+
+  #search-mentors, form input[type="text"]{
+    
+    margin-left:-400px;
+   
+  }
+  .mentor-avatar{
+    width: 20%; 
+    height:10%;  
+    position: absolute;
+    float:center;
+    margin-left:150px;
+  }
+}
