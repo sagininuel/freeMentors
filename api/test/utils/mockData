@@ -1,0 +1,70 @@
+export default {
+
+  // Sign Up Mock Data
+  signUp: {
+    validUserDetails: {
+      firstname: 'Sagini',
+      lastname: 'Emmanuel',
+      address: '43844-00100, Nairobi',
+      email: 'example@gmail.com',
+      password: 'password5864',
+      confirmPassword: 'password5864',
+    },
+    adminUserDetails: {
+      firstname: 'Sagini',
+      lastname: 'Emmanuel',
+      email: 'admin@email.com',
+      address: '47575-00200, Mombasa',
+      password: 'password5864',
+      confirmPassword: 'password5864',
+    },
+    mentorUserDetails: {
+      firstname: 'Sagini',
+      lastname: 'Emmanuel',
+      email: 'admin@email.com',
+      address: '47575-00200, Mombasa',
+      password: 'password5864',
+      confirmPassword: 'password5864',
+    },
+    invalidUserDetails: {
+      firstname: '',
+      lastname: 'Ruth',
+      email: 'example@gmail.com',
+      address: '99,00101,Eldoret',
+      password: 'password',
+      confirmPassword: 'pass',
+    },
+  },
+
+  //  Login Mock Data
+  signIn: {
+    validNormalUser: {
+      email: 'example@gmail.com',
+      password: 'password5864',
+    },
+    validAdminUser: {
+      email: 'admin@email.com',
+      password: 'password5864',
+    },
+    validMentorUser: {
+      email: 'admin@email.com',
+      password: 'password5864',
+    },
+    invalidPasswordFormat: {
+      email: 'sagini.mochumbe@gmail.com',
+      password: 'sagini',
+    },
+    invalidEmailFormat: {
+      email: 'sagini.mochumbe',
+      password: 'sagini5864',
+    },
+    noEmail: {
+      email: '',
+      password: 'sagini5864',
+    },
+    noPassword: {
+      email: 'sagini.mochumbe@gmail.com',
+      password: '',
+    },
+  },
+};

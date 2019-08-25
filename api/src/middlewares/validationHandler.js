@@ -18,6 +18,18 @@ class validationHandler {
      * @returns {(function|object)} Function next() or JSON object
      */
 
+
+  static isEmptyReq(req, res, next) {
+    if (!Object.values(req.body).length) {
+      return res.status(400).json({
+        status: 400,
+        error: 'Sorry, empty PUT Requests Are Not Allowed',
+      });
+    }
+
+    next();
+  }
+
   static validate(req, res, next) {
     const errors = validationResult(req);
     // eslint-disable-next-line no-param-reassign

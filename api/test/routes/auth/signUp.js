@@ -3,16 +3,19 @@
 // import 'babel-polyfill';
 import request from 'supertest';
 import { expect } from 'chai';
-import mockData from '../utils/mockData';
+import mockData from '../../utils/mockData';
 import app from '../../../src/index';
 
 //  Object de-structuring
-const { validUserDetails, invalidUserDetails } = mockData.signUp;
+const {
+  validUserDetails,
+  invalidUserDetails,
+} = mockData.signUp;
 
 describe('Auth routes: Signup', () => {
   it('should add a new user', (done) => {
     request(app)
-      .post('/api/v1/auth/signup')
+      .post('/api/v1/auth/signUp')
       .set('Accept', 'application/json')
       .send({ ...validUserDetails })
       .end((err, res) => {
@@ -47,7 +50,7 @@ describe('Auth routes: Signup', () => {
       .end((err, res) => {
         expect(res.statusCode).to.equal(400);
         expect(res.body).to.be.a('object');
-        expect(res.body).to.include.keys('errors');
+        expect(res.body).to.include.keys('errors due to invalid fields');
 
         done(err);
       });

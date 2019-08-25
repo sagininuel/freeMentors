@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+import bcrypt from 'bcrypt';
 import user from '../models/user';
 
 
@@ -39,6 +40,42 @@ class userController {
       status: res.statusCode,
       error: 'Sorry, this Email is already registered',
     });
+  }
+
+  static async signIn(req, res) {
+    const { email, password } = req.body;
+    const userFound = user.findOne(email);
+
+
+    if (!userFound) {
+      return res.status(404).send({
+        status: res.statusCode,
+        error: 'Sorry, this Email is not registered',
+      });
+    }
+    const isPasswordValid = userController.verifyPassword(password, userFound.password);
+
+    if (!isPasswordValid) {
+      return res.status(401).send({
+        status: res.statusCode,
+        error: 'Sorry, wrong Password',
+      });
+    }
+
+    return res.status(200).send({
+      status: res.statusCode,
+      data: {
+        id: userFound.id,
+        email: userFound.email,
+        firstname: userFound.firstname,
+        lastname: userFound.lastname,
+        isAdmin: JSON.parse(userFound.isAdmin),
+      },
+    });
+  }
+
+  static verifyPassword(password, hash) {
+    return bcrypt.compareSync(password, hash);
   }
 }
 

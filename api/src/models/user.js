@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable no-console */
 class user {
   /**
@@ -28,6 +29,10 @@ class user {
 
   findOne(email) {
     return this.users.find((user) => user.email === email);
+  }
+
+  findAll() {
+    return this.users;
   }
 }
 
