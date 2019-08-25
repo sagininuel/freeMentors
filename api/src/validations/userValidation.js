@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { check } from 'express-validator/check';
 import notEmpty from '../helpers/notEmpty';
 
