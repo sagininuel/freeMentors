@@ -6,6 +6,7 @@
     "scripts": {
         "test": "mocha ./api/test --require babel-register --recursive --timeout 50000 --exit",
         "start": "node_modules/.bin/nodemon ./api/src/index.js --exec babel-node --",
+        "drop:create": "npm-run-all drop migrate",
         "lint": "./node_modules/.bin/eslint ./api --fix"
     },
     "repository": {
@@ -31,7 +32,6 @@
         "chai": "^4.2.0",
         "express": "^4.17.1",
         "express-validator": "^6.1.1",
-        "mocha": "^6.2.0",
         "supertest": "^4.0.2"
     },
     "devDependencies": {
