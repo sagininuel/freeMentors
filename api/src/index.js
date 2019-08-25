@@ -1,13 +1,28 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-console */
+/* eslint-disable linebreak-style */
 import express from 'express';
-// import bodyParser from 'body-parser';
+import bodyParser from 'body-parser';
+import apiRoutes from './routes/index';
+import errorHandler from './middlewares/errorHandler';
 
-// import 'babel-polyfill';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import 'babel-polyfill';
 
-//  Set up the express app
 const app = express();
-
-//  Set up the server
 const port = 3000;
-app.listen(port, () => {
-  console.log(`Yoh, Sagini, am listening on port ${port}!`);
-});
+
+app.use(bodyParser.json());
+app.use(
+  bodyParser.urlencoded({
+    extended: false,
+  }),
+);
+
+app.use('/api', apiRoutes);
+app.use('*', (req, res) => res.status(404).json({ status: 404, error: 'Page Not Found' }));
+
+app.use(errorHandler.sendError);
+app.listen(port, () => console.log(`listening on port ${port}!`));
+
+export default app;
