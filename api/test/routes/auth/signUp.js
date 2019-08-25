@@ -6,6 +6,7 @@ import { expect } from 'chai';
 import mockData from '../utils/mockData';
 import app from '../../../src/index';
 
+//  Object de-structuring
 const { validUserDetails, invalidUserDetails } = mockData.signUp;
 
 describe('Auth routes: Signup', () => {
