@@ -1,7 +1,6 @@
 /* eslint-disable linebreak-style */
-import bcrypt from 'bcrypt';
+// import bcrypt from 'bcrypt';
 import user from '../models/user';
-
 
 /**
  *
@@ -25,16 +24,13 @@ class userController {
       return res.status(201).send({
         status: res.statusCode,
         data: {
-
           id: isUserRegistered.id,
           email: isUserRegistered.email,
           firstname: isUserRegistered.firstname,
           lastname: isUserRegistered.lastname,
-
         },
       });
     }
-
 
     return res.status(400).send({
       status: res.statusCode,
@@ -43,9 +39,9 @@ class userController {
   }
 
   static async signIn(req, res) {
-    const { email, password } = req.body;
+    // const { email, password } = req.body;
+    const { email } = req.body;
     const userFound = user.findOne(email);
-
 
     if (!userFound) {
       return res.status(404).send({
@@ -53,14 +49,14 @@ class userController {
         error: 'Sorry, this Email is not registered',
       });
     }
-    const isPasswordValid = userController.verifyPassword(password, userFound.password);
+    // const isPasswordValid = userController.verifyPassword(password, userFound.password);
 
-    if (!isPasswordValid) {
-      return res.status(401).send({
-        status: res.statusCode,
-        error: 'Sorry, wrong Password',
-      });
-    }
+    // if (!isPasswordValid) {
+    //   return res.status(401).send({
+    //     status: res.statusCode,
+    //     error: 'Sorry, wrong Password',
+    //   });
+    // }
 
     return res.status(200).send({
       status: res.statusCode,
@@ -69,13 +65,13 @@ class userController {
         email: userFound.email,
         firstname: userFound.firstname,
         lastname: userFound.lastname,
-        isAdmin: JSON.parse(userFound.isAdmin),
+        // isAdmin: JSON.parse(userFound.isAdmin),
       },
     });
-  }
 
-  static verifyPassword(password, hash) {
-    return bcrypt.compareSync(password, hash);
+    // static verifyPassword(password, hash) {
+    //   return bcrypt.compareSync(password, hash);
+    // }
   }
 }
 

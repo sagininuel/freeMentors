@@ -7,10 +7,7 @@ import mockData from '../../utils/mockData';
 import app from '../../../src/index';
 
 //  Object de-structuring
-const {
-  validUserDetails,
-  invalidUserDetails,
-} = mockData.signUp;
+const { validUserDetails, invalidUserDetails } = mockData.signUp;
 
 describe('Auth routes: Signup', () => {
   it('should add a new user', (done) => {
@@ -50,7 +47,7 @@ describe('Auth routes: Signup', () => {
       .end((err, res) => {
         expect(res.statusCode).to.equal(400);
         expect(res.body).to.be.a('object');
-        expect(res.body).to.include.keys('errors due to invalid fields');
+        expect(res.body).to.include.keys('errors');
 
         done(err);
       });

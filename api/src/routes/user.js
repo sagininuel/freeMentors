@@ -8,7 +8,17 @@ const userRoutes = express.Router();
 
 const validate = [validationHandler.validate];
 
-userRoutes.post('/signUp', userValidation.signUp, validate, userController.signUp);
-userRoutes.post('/signIn', userValidation.signIp, validate, userController.signIn);
+userRoutes.post(
+  '/signUp',
+  userValidation.signUp,
+  validate,
+  userController.signUp,
+);
+userRoutes.post(
+  '/signIn',
+  userValidation.signIn,
+  validate,
+  userController.signIn,
+);
 
 export default userRoutes;
