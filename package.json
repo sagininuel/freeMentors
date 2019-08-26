@@ -6,6 +6,7 @@
     "scripts": {
         "test": "mocha ./api/test --require babel-register --recursive --timeout 50000 --exit",
         "start": "node_modules/.bin/nodemon ./api/src/index.js --exec babel-node --",
+        "coverage": "cross-env NODE_ENV=test npm run nyc -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
         "drop:create": "npm-run-all drop migrate",
         "lint": "./node_modules/.bin/eslint ./api --fix"
     },
