@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "mocha ./api/test --require babel-register --recursive --timeout 50000 --exit",
-        "start": "node_modules/.bin/nodemon ./api/src/index.js --exec babel-node --",
+        "dev": "node_modules/.bin/nodemon ./api/src/index.js --exec babel-node --",
+        "start": "babel-node -- ./api/src/index.js  ",
         "coverage": "cross-env NODE_ENV=test npm run nyc -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
         "nyc": "nyc --reporter=lcov --reporter=text mocha 'api/test/'  --require babel-core/register --recursive --timeout 50000 --exit",
         "drop:create": "npm-run-all drop migrate",
