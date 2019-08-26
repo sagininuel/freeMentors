@@ -2,6 +2,7 @@
 // import bcrypt from 'bcrypt';
 import user from '../models/user';
 
+
 /**
  *
  * @class UserController
@@ -39,7 +40,6 @@ class userController {
   }
 
   static async signIn(req, res) {
-    // const { email, password } = req.body;
     const { email } = req.body;
     const userFound = user.findOne(email);
 
@@ -58,6 +58,8 @@ class userController {
     //   });
     // }
 
+    // const token = Authorization.generateToken(userFound);
+
     return res.status(200).send({
       status: res.statusCode,
       data: {
@@ -68,11 +70,12 @@ class userController {
         // isAdmin: JSON.parse(userFound.isAdmin),
       },
     });
-
-    // static verifyPassword(password, hash) {
-    //   return bcrypt.compareSync(password, hash);
-    // }
   }
+
+  // static verifyPassword(password, hash) {
+  //   return bcrypt.compareSync(password, hash);
+  // }
 }
+
 
 export default userController;
