@@ -9,13 +9,13 @@ const userRoutes = express.Router();
 const validate = [validationHandler.validate];
 
 userRoutes.post(
-  '/signUp',
+  '/signup',
   userValidation.signUp,
   validate,
   userController.signUp,
 );
 userRoutes.post(
-  '/signIn',
+  '/signin',
   userValidation.signIn,
   validate,
   userController.signIn,
