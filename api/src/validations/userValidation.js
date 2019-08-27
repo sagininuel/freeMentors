@@ -19,7 +19,7 @@ export default {
       .withMessage('Please input a valid email address'),
   ],
 
-  signIn: [
+  signin: [
     check('email')
       .trim()
       .exists()

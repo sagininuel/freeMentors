@@ -40,7 +40,7 @@ class UserController {
     });
   }
 
-  static async signIn(req, res) {
+  static async signin(req, res) {
     const { email } = req.body;
     const userFound = user.findOne(email);
 
