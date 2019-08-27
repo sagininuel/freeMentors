@@ -29,6 +29,10 @@ class User {
   findOne(email) {
     return this.users.find((user) => user.email === email);
   }
+
+  findAll() {
+    return this.users;
+  }
 }
 
 export default new User();

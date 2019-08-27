@@ -3,7 +3,7 @@
 // import 'babel-polyfill';
 import request from 'supertest';
 import { expect } from 'chai';
-import mockData from '../utils/mockData';
+import mockData from '../../utils/mockData';
 import app from '../../../src/index';
 
 //  Object de-structuring
@@ -12,7 +12,7 @@ const { validUserDetails, invalidUserDetails } = mockData.signUp;
 describe('Auth routes: Signup', () => {
   it('should add a new user', (done) => {
     request(app)
-      .post('/api/v1/auth/signup')
+      .post('/api/v1/auth/signUp')
       .set('Accept', 'application/json')
       .send({ ...validUserDetails })
       .end((err, res) => {

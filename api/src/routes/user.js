@@ -15,6 +15,13 @@ userRoutes.post(
   userController.signup,
 );
 
+userRoutes.post(
+  '/signin',
+  userValidation.signin,
+  validate,
+  userController.signin,
+);
+
 export default userRoutes;
 
 /**
