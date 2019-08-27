@@ -10,6 +10,7 @@
 
 Free Mentors is a social initiative where accomplished professionals become role models to young people to provide free mentorship sessions.
 
+
 # Features
 
 ## Core Features
@@ -92,5 +93,6 @@ To have this application running on your computer, follow the following steps
 - [AirBnB](https://github.com/airbnb/javascript)
 
 ## Author
+
 
 - [ Sagini Emmanuel ](https://github.com/sagininuel)
