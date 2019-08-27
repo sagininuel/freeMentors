@@ -1,12 +1,12 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable no-console */
-class user {
+class User {
   /**
      * class constructor
      *
      */
   constructor() {
     this.users = [];
-    this.numberOfUsers = this.users.length;
   }
 
   /**
@@ -16,7 +16,7 @@ class user {
      */
   create(queryData, data) {
     const newUser = {
-      id: this.numberOfUsers + 1,
+      id: this.users.length + 1,
       email: data.email || '',
       firstname: data.firstname || '',
       lastname: data.lastname || '',
@@ -31,4 +31,4 @@ class user {
   }
 }
 
-export default new user();
+export default new User();

@@ -2,12 +2,11 @@
 import { validationResult } from 'express-validator/check';
 import { matchedData } from 'express-validator/filter';
 
-
 /**
  * @exports
  * @class ValidationHandler
  */
-class validationHandler {
+class ValidationHandler {
   /**
      * Sends validation errors if existent, passes it on to the next middleware if not
      * @method validate
@@ -39,4 +38,4 @@ class validationHandler {
   }
 }
 
-export default validationHandler;
+export default ValidationHandler;
