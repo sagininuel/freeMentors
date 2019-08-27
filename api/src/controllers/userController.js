@@ -1,13 +1,14 @@
 /* eslint-disable linebreak-style */
-// import bcrypt from 'bcrypt';
+import { config } from 'dotenv';
 import user from '../models/user';
 
+config();
 
 /**
  *
  * @class UserController
  */
-class userController {
+class UserController {
   /**
      * Create a new User
      * @static
@@ -16,7 +17,7 @@ class userController {
      * @returns { Object }
      * @memberof UserController
      */
-  static async signUp(req, res) {
+  static async signup(req, res) {
     const isTheUserRegistered = user.findOne(req.body.email);
 
     if (!isTheUserRegistered) {
@@ -77,5 +78,4 @@ class userController {
   // }
 }
 
-
-export default userController;
+export default UserController;

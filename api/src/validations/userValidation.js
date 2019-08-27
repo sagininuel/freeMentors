@@ -3,7 +3,7 @@ import { check } from 'express-validator/check';
 import notEmpty from '../helpers/notEmpty';
 
 export default {
-  signUp: [
+  signup: [
     check(['firstname', 'lastname', 'email'])
       .trim()
       .exists()
