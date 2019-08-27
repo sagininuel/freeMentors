@@ -4,12 +4,10 @@ import ValidationHandler from '../middlewares/validationHandler';
 import MentorController from '../controllers/mentorController';
 import MentorValidation from '../validations/mentorValidation';
 
-
 const mentorRoutes = express.Router();
 
 mentorRoutes.get('/:mentorId', MentorValidation.getMentorById, ValidationHandler.validate, MentorController.getMentorById);
 mentorRoutes.get('/', MentorValidation.getAllMentors, ValidationHandler.validate, MentorController.getAllMentors);
-
 
 export default mentorRoutes;
 
